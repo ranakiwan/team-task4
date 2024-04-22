@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF8">
+    <title>Login</title>
+    <link rel="stylesheet" href="task2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script type="text/javascript">
+const Data =[];
+function register() {
+    const username =document.getElementById('username').value;
+    const email = document.getElementById('lemail').value;
+    const password = document.getElementById('lpassword').value;
+    if (username && email && password) {
+                Data.push({ username: username, email: email, password: password });
+                console.log(Data); 
+            } else {
+                alert('Some fields are empty.');
+            }
+        }
+
+        function toggleForm() {
+    let loginForm = document.getElementById('login-form');
+    let signupForm = document.getElementById('signup-form');
+    
+    // Toggle visibility of login and signup forms
+    if (loginForm.style.display === 'none' || loginForm.style.display === '') {
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+    } else {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+    }
+}
+
+function isMail(elem) {
+            var ne = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (elem.match(ne)) {
+                return true;
+            }
+            else {
+                alert("invalid email form");
+                return false;
+            }
+        }
+        function isPass(elem) {
+            var ne = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+            if (elem.match(ne)) {
+                return true;
+            }
+            else {
+                alert("Your password should contain minimum 6 characters, including numbers, letters and special characters");
+                return false;
+            }
+        }
+
+        function validateEmail() {
+            var luser = document.getElementById('luser').value;
+            if (luser.length == 0) {
+                return "Error user name is empty\n";
+            }
+            else {
+                return "";
+            }
+        }
+        function validatePassword() {
+            var lpass = document.getElementById('lpass').value;
+            if (lpass.length == 0) {
+                return "Error password  is empty\n";
+            }
+            else {
+                return "";
+            }
+        }
+
+        function validate() {
+                var result = validateEmail() + validatePassword();
+            alert("logged in");
+            if (result == "") {
+                alert("returns true");
+                return true;
+            }
+            else {
+                alert("errors");
+                return false;
+            }
+
+        }
+        document.getElementById("login").addEventListener("click", () => {
+            alert("Logged in");
+
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+        <form id="login-form" action="" method="POST" onsubmit="return validate()">
+            <div class="login-form" >
+
+                <h1>Log in</h1>
+                <div class="inputbox">
+                    <p>Username or Email</p>
+                    <input type="email" placeholder="email" required="" id="luser" name="luser"
+                        onblur="isMail(document.getElementById('luser').value)" />
+                </div>
+                <div class="inputbox">
+                    <p>Password</p>
+                    <input type="password" placeholder="password" required="" id="lpass" name="lpass"
+                        onblur="isPass(document.getElementById('lpass').value)" />
+                </div>
+                <div>
+                    <a href="" class="forgot">Forgot your password?</a>
+                </div>
+                <button type="submit" class="btn" id="login" value="login">Sign in</button>
+                <div class="social">
+                    <p> Login with social accounts </p>
+
+                    <div class="logos">
+                        <a href="https://accounts.google.com/v3/signin/identifier?ifkv=ARZ0qKIavxJr8fB4Q1Z6S0xbi2Gd-ft7Zq4mgN4FaV6O_LTkjLVjrFDk8x4_zr_1eoaB8GhNbMIF4A&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1560428754%3A1713614629270896&theme=mn&ddm=0">
+                            <img src="google1.png" alt="google"></a>
+                            <a  href="https://twitter.com/?login"> <img src="twitter-128.png" alt="twitter"></a>
+                            <a  href="https://github.com/login"> <img src="github1.png" alt="github"></a>
+                    
+
+                    </div>
+
+                </div>
+
+                <div class="signup-opt">
+                    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
+                </div>
+            </div>
+</form>
+
+<form id="signup-form" class="hidden" action="" method="POST">
+            <div class="signup-form">
+                <h1>Register</h1>
+                <div class="inputbox">
+                    <p>Username</p>
+                    <input type="text" placeholder="text" required="" id="username" name="user name" />
+                </div>
+                <div class="inputbox">
+                    <p>Email</p>
+                    <input type="email" placeholder="email" required="" id="lemail" name="email" 
+                    onblur="isMail(document.getElementById('lemail').value)" />
+                </div>
+                </div>
+                <div class="inputbox">
+                    <p>Password</p>
+                    <input type="password" placeholder="password" required="" id="lpassword" name="lpassword"
+                        onblur="isPass(document.getElementById('lpassword').value)" />
+                </div>
+
+                <button type="submit" class="btn" id="signup" value="signup" onclick ="register()">Sign up</button>
+
+                <div class="register">
+                    <p> Register with social accounts</p>
+                    <div class="logo">
+                        <a href="https://accounts.google.com/v3/signin/identifier?ifkv=ARZ0qKIavxJr8fB4Q1Z6S0xbi2Gd-ft7Zq4mgN4FaV6O_LTkjLVjrFDk8x4_zr_1eoaB8GhNbMIF4A&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1560428754%3A1713614629270896&theme=mn&ddm=0">
+                            <img src="google1.png" alt="google"></a>
+                            <a  href="https://twitter.com/?login"> <img src="twitter-128.png" alt="twitter"></a>
+                            <a  href="https://github.com/login"> <img src="github1.png" alt="github"></a>
+
+                    </div>
+                    
+                </div>
+                <div class="signup-opt">
+                    <p>Already have an account? <a href="#" onclick="toggleForm()">login</a></p>
+                </div>
+            </div>
+
+        </form>
+
+</body>
+
+</html>

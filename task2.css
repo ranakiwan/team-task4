@@ -1,0 +1,244 @@
+* {
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+
+
+.login-form {
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 400px;
+    height: 550px;
+    background-color: #290950;
+    color: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 40px;
+
+}
+
+
+.login-form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+
+
+
+.login-form .inputbox {
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    margin-left: -10px;
+    padding: 10px;
+    box-sizing: content-box;
+
+}
+
+
+.inputbox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid grey;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+
+}
+
+
+
+.login-form .btn {
+    width: 100%;
+    height: 50px;
+    background: #de92fb;
+    box-shadow: 1px black;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    margin-top: 30px;
+    
+
+}
+
+
+
+.login-form .signup-opt {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    margin-top: 60px;
+    margin-right: 0px;
+}
+
+.signup-opt p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.signup-opt p a:hover {
+    text-decoration: underline;
+}
+
+.forgot {
+    font-size: 14.5px;
+    margin: 10px;
+   
+    float: right;
+    text-decoration: none;
+    font-weight: 600;
+    
+
+}
+
+.forgot:hover {
+    text-decoration: underline;
+
+}
+
+.social {
+    
+    display: flex;
+    height: 30px;
+    padding: 10px;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-bottom: 10px;
+
+}
+
+.social div a {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    float: left;
+    padding: 20px;
+    margin-left: 120px;
+    margin: 2px;
+    cursor: pointer;
+
+}
+
+.logos {
+    display: flex;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+.logos img {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.hidden{
+    display:none;
+}
+
+#login-form {
+    display:block;
+}
+
+#signup-form{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 400px;
+    height: 600px;
+    background-color: #290950;
+    color: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 40px;
+
+}
+
+#signup-form h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+#signup-form .inputbox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    margin-left: -10px;
+    padding: 10px;
+    box-sizing: content-box;
+
+
+}
+
+#signup-form .btn{
+    margin-top: 30px;
+    background-color: #8c33e5;
+    width: 100%;
+    height: 40px;
+}
+ .register{
+    display: flex;
+    height: 30px;
+    padding: 10px;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-bottom: 10px;
+
+
+}
+
+.register div a{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    float: left;
+    padding: 20px;
+    margin-left: 120px;
+    margin: 2px;
+    cursor: pointer;
+
+
+}
+.logo{
+    display: flex;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.logo img{
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signup-opt{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    margin-right: 0px;
+
+}
